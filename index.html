@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Sally Student</title>
 </head>
 <body>
   <div id="application-root"></div>
@@ -21,13 +21,63 @@
 
 <script type="text/babel">
   ReactDOM.render(
-    <div>
-      <h1>Hello, world!</h1>
-      <p>How are you today?</p>
-      <h2>Look what React can do!</h2>
-    </div>,
+    <Page />,
     document.querySelector('#application-root')
   );
+  function Page(){
+    return (
+      <div className = "header">
+        <Name />
+        <Image />
+      </div>
+      <main>
+        <Work />
+      </main>
+    );
+  }
+  function Image() {
+    return (
+      <img src = "https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" />
+    );
+  }
+  function Name(){
+    return (
+      <h1>Sally Student</h1>
+    );
+  }
+  function Work(){
+    return (
+      <div className = "work">
+        <Job />
+        <Job />
+      </div>
+    );
+  }
+  function Job(){
+    return (
+      <div className = "job">
+        <h2>Job Title</h2>
+        <p>Working dates</p>
+        <p>Job description</p>
+      </div>
+    );
+  }
+
 </script>
 </body>
 </html>
+
+<!--
+  <h1>Sally Student</h1>
+  <img> sally
+  <div class = edu>
+    school
+  <div class = work>
+    job 1
+    job 2
+  <div class = contact>
+    phone
+    email
+  
+
+-->
