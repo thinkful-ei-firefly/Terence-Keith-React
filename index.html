@@ -21,20 +21,36 @@
 
 <script type="text/babel">
   ReactDOM.render(
-    <Page />,
+    <App />,
     document.querySelector('#application-root')
   );
-  function Page(){
+  function App(){
     return (
-      <div className = "header">
-        <Name />
-        <Image />
+      <div>
+        <Header />
+        <Main />
       </div>
+    );
+  }
+
+  function Header(){
+    return(
+      <header>
+        <Name />
+      </header>
+    );
+  }
+  function Main(){
+    return (
       <main>
+        <Image />
         <Work />
+        <Edu />
+        <Contact />
       </main>
     );
   }
+
   function Image() {
     return (
       <img src = "https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" />
@@ -56,9 +72,28 @@
   function Job(){
     return (
       <div className = "job">
-        <h2>Job Title</h2>
+        <h2>Job Title, Company</h2>
         <p>Working dates</p>
         <p>Job description</p>
+      </div>
+    );
+  }
+  function Edu(){
+    return (
+      <div className = "edu">
+        <h2>Some College</h2>
+        <p>Graduated 1975</p>
+        <p>Liberal Arts Major</p>
+      </div>
+    );
+  }
+  function Contact(){
+    return(
+      <div className = "contact">
+        <h2>Sally Student</h2>
+        <p>Email: SallyStudent@gmail.com</p>
+        <p>Phone: 123 -456- 7890</p>
+        <p>Address: 123 Some st, Some Town, Canada</p>
       </div>
     );
   }
